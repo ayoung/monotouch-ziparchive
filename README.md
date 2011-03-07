@@ -23,14 +23,14 @@ Usage
 To zip files:
 
       var zipFile = new LibZipArchive.ZipArchive();
-      zipFile.CreateZipFile2("/some/path/to/the/archive/you/want/to/create.zip");
-      zipFile.AddFile(Configuration.DB_INSTALLED_PATH, "somefile.txt");
+      zipFile.CreateZipFile2("/path/to/archive/file.zip");
+      zipFile.AddFile("/path/of/file/to/compress.txt", "somefile.txt");
       // add more files as needed
       zipFile.CloseZipFile2();
 
 To unzip files:
 
       var zipFile = new LibZipArchive.ZipArchive();
-      zipFile.UnzipOpenFile("/some/path/to/the/archive/you/want/to/unzip.zip");
-      zipFile.UnzipFileTo("/some/path/to/where/you/want/the/files/to/go", true);
+      zipFile.UnzipOpenFile("/path/to/archive/file.zip");
+      zipFile.UnzipFileTo("/location/to/unarchive", true);
       zipFile.UnzipCloseFile();
